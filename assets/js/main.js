@@ -3,7 +3,14 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
-
+function copiarAlPortapapeles(id_elemento) {
+	var aux = document.createElement("input");
+	aux.setAttribute("value", document.getElementById(id_elemento).innerHTML);
+	document.body.appendChild(aux);
+	aux.select();
+	document.execCommand("copy");
+	document.body.removeChild(aux);
+  }
 (function($) {
 
 	var	$window = $(window),
